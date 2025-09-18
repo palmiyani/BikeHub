@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- This defines the document type as HTML5 -->
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 for supporting all languages -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page responsive on mobile devices -->
+    
+    <title>About Us - BikeHub</title> <!-- This is the title shown on the browser tab -->
+    
+    <!-- Linking Bootstrap CSS for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Linking Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Linking external CSS file (styles.css) -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Page-wide styling */
+        body {
+            font-family: 'Poppins', sans-serif; /* Sets the font */
+            background-color: #121212; /* Dark background color */
+            color: #fff; /* White text color */
+        }
+
+        /* Navbar (top menu) styling */
+        .navbar {
+            background: rgba(0, 0, 0, 0.8); /* Slightly transparent black background */
+            transition: background 0.4s ease-in-out; /* Smooth transition effect */
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.8rem; /* Adjusts the size of the site name */
+            color: rosybrown; /* Text color of the brand name */
+        }
+
+        .navbar.scrolled {
+            background: black; /* Changes background to full black when scrolling */
+        }
+
+        /* About Section Styling */
+        .about-section {
+            padding: 100px 0;
+            background: linear-gradient(to right, #f7f5f5, #c4a5ac); /* Gradient background */
+            color: white; /* Text color */
+        }
+
+        /* About Image Styling */
+        .about-image {
+            border-radius: 15px; /* Rounds the image corners */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds a slight shadow */
+            transition: transform 0.4s ease-in-out; /* Animation effect */
+        }
+
+        .about-image:hover {
+            transform: scale(1.05); /* Enlarges image when hovered */
+        }
+
+        /* Card (Specialties Section) Styling */
+        .card {
+            background: #1e1e1e; /* Dark background for cards */
+            color: white; /* White text */
+            border-radius: 15px; /* Rounds the corners */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Enlarges card slightly when hovered */
+            box-shadow: 0px 10px 15px rgba(255, 75, 43, 0.3); /* Adds a glowing shadow */
+        }
+
+        /* Footer Styling */
+        .footer {
+            padding: 20px 0;
+            background: #000; /* Black footer background */
+            color: #ff4b2b; /* Orange text */
+            transition: color 0.3s ease-in-out;
+        }
+
+        .footer:hover {
+            color: white; /* Changes text color to white on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">BikeHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" data-bs-dismiss="collapse"aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Category
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="index.html#bobber">Bobber</a></li>
+                            <li><a class="dropdown-item" href="index.html#city-bikes">City Bikes</a></li>
+                            <li><a class="dropdown-item" href="index.html#sport">Sport</a></li>
+                            <li><a class="dropdown-item" href="index.html#off-roading">Off-Roading</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <div class="about-section text-center">
+        <div class="container">
+            <h1 class="mb-5 text-dark">About BikeHub</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" 
+                         alt="BikeHub Team" class="about-image img-fluid"> <!-- About Image -->
+                </div>
+                <div class="col-md-6 text-dark">
+                    <h2>Our Story</h2>
+                    <p>BikeHub was founded in 2010 by a group of passionate motorcycle enthusiasts who wanted to create a one-stop destination for all things related to bikes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Specialties Section -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Our Specialties</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card p-4">
+                    <h5>Wide Selection</h5>
+                    <p>We offer a diverse range of motorcycles, from sport bikes to cruisers, ensuring there's something for every rider.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card p-4">
+                    <h5>Expert Advice</h5>
+                    <p>Our team of experienced riders is always ready to provide guidance and answer your questions.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card p-4">
+                    <h5>Quality Service</h5>
+                    <p>We pride ourselves on delivering exceptional customer service and after-sales support.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center mt-5">
+        <p>&copy; 2023 BikeHub. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> <!-- GSAP Animation Library -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Navbar Animation
+            gsap.from(".navbar", { opacity: 0, y: -20, duration: 1 });
+
+            // About Section Animation
+            gsap.from(".about-image", { opacity: 0, x: -100, duration: 1, delay: 0.5 });
+
+            // Card Animation - Cards will appear with a small delay
+            gsap.from(".card", {
+                opacity: 0,
+                scale: 0.8,
+                duration: 0.8,
+                stagger: 0.2,
+                delay: 1
+            });
+
+            // Navbar scroll effect - Changes background color on scroll
+            // window.addEventListener("scroll", function() {
+            //     if (window.scrollY > 50) {
+            //         document.querySelector(".navbar").classList.add("scrolled");
+            //     } else {
+            //         document.querySelector(".navbar").classList.remove("scrolled");
+            //     }
+            // });
+        });
+    </script>
+</body>
+</html>

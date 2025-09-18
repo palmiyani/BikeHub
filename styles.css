@@ -1,0 +1,150 @@
+:root {
+    --primary-color: #121212;
+    --secondary-color: #E50914;
+    --accent-color: #6B7280;
+    --highlight-color: #FFCC00;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    background-color: rgba(18, 18, 18, 0.9);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--highlight-color) !important;
+}
+
+.nav-link {
+    color: #ffffff !important;
+}
+
+.nav-link:hover {
+    color: var(--highlight-color) !important;
+}
+
+.carousel-item img {
+    height: 600px;
+    object-fit: cover;
+    margin-top: 65px;
+}
+
+.category-title {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: var(--accent-color);
+    border: none;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    color: var(--highlight-color);
+}
+
+
+
+.contact-form {
+    background-color: rgba(107, 114, 128, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+
+
+
+.bike-details {
+    background-color: rgba(107, 114, 128, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.specs-table {
+    background-color: rgba(107, 114, 128, 0.2);
+    border-radius: 10px;
+}
+
+.specs-table th {
+    color: var(--highlight-color);
+}
+
+.bike-image {
+    border-radius: 10px;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.price-tag {
+    color: var(--highlight-color);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.features-list li {
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--highlight-color);
+    color: var(--primary-color);
+}
+
+
+.carousel-item img {
+    border-radius: 10px;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+.about-section {
+    padding: 100px 0;
+}
+
+.about-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.speciality-card {
+    background-color: var(--accent-color);
+    border: none;
+    transition: transform 0.3s;
+}
+
+.speciality-card:hover {
+    transform: scale(1.05);
+}
+
+.feedback-card {
+    background-color: rgba(107, 114, 128, 0.1);
+    border: none;
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    padding: 20px 0;
+}

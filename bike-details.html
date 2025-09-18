@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BikeHub - Bike Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">BikeHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-dismiss="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Category
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="index.html#bobber">Bobber</a></li>
+                            <li><a class="dropdown-item" href="index.html#city-bikes">City Bikes</a></li>
+                            <li><a class="dropdown-item" href="index.html#sport">Sport</a></li>
+                            <li><a class="dropdown-item" href="index.html#off-roading">Off-Roading</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container bike-details " id="bikeDetailsContainer">
+        <!-- Content will be dynamically populated by JavaScript -->
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="dealerContactModal" tabindex="-1" aria-labelledby="dealerContactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content"style="background-color: #121212;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="dealerContactModalLabel">Dealer's Contact Information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Shop Name:</strong> BikeHub Dealership</p>
+                    <p><strong>Shop Address:</strong> 123 Motorcycle Lane, Bike City, BC 12345</p>
+                    <p><strong>Dealer's Email:</strong> dealer@bikehub.com</p>
+                    <p><strong>Mobile No:</strong> +1 (234) 567-8901</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer text-center">
+        <div class="container">
+            <p>&copy; 2023 BikeHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Bike details database
+        const bikeDetails = {
+            'bobber1': {
+                name: 'Jawa 42 Bobber',
+                price: ' 2,13,597',
+                model: '2023',
+                images: [
+                    'Images/Bobber/2.jpg',
+                    'Images/Bobber/1.jpg'
+                ],
+                category: 'Bobber',
+                description: 'The Jawa Bobber combines classic styling with modern performance, delivering an authentic bobber experience with contemporary capability.',
+                specs: {
+                    'Engine': '334cc liquid-cooled parallel-twin',
+                    'Power': '29.51 bhp',
+                    'Transmission': '6-speed',
+                    'Weight': '502 lbs',
+                    'Fuel Capacity': '3.2 gallons',
+                    'Seat Height': '27.2 inches'
+                },
+                features: [
+                    'Adjustable riding position',
+                    'Ride-by-Wire throttle',
+                    'Two riding modes',
+                    'ABS',
+                    'Traction control',
+                    'LED lighting'
+                ]
+            },
+            'bobber2': {
+                name: 'Royal Enfield Classic 650',
+                price: ' 3,40,597',
+                model: '2025',
+                images: [
+                    'Images/Bobber/3.jpg',
+                    'Images/Bobber/4.jpg'
+                ],
+                category: 'Bobber',
+                description: 'The Royal Enfield Classic 650 combines classic styling with modern performance, delivering an authentic bobber experience with contemporary capability.',
+                specs: {
+                    'Engine': '647.95cc liquid-cooled parallel-twin',
+                    'Power': '46.39bhp',
+                    'Transmission': '6-speed',
+                    'Weight': '502 lbs',
+                    'Fuel Capacity': '3.2 gallons',
+                    'Seat Height': '27.2 inches'
+                },
+                features: [
+                    'Adjustable riding position',
+                    'Ride-by-Wire throttle',
+                    'Two riding modes',
+                    'ABS',
+                    'Traction control',
+                    'LED lighting'
+                ]
+            },'bobber3': {
+                name: 'Harley Davidson X440 ',
+                price: ' 2,84,597',
+                model: '2023',
+                images: [
+                    'Images/Bobber/5.jpg',
+                    'Images/Bobber/6.jpg'
+                ],
+                category: 'Bobber',
+                description: 'The Harley Davidson X440 combines classic styling with modern performance, delivering an authentic bobber experience with contemporary capability.',
+                specs: {
+                    'Engine': '440cc liquid-cooled parallel-twin',
+                    'Power': '27bhp',
+                    'Transmission': '6-speed',
+                    'Weight': '502 lbs',
+                    'Fuel Capacity': '3.2 gallons',
+                    'Seat Height': '27.2 inches'
+                },
+                features: [
+                    'Adjustable riding position',
+                    'Ride-by-Wire throttle',
+                    'Two riding modes',
+                    'ABS',
+                    'Traction control',
+                    'LED lighting'
+                ]
+            },
+            'city1': {
+                name: 'Honda CB300R',
+                price: 199490,
+                model: '2023',
+                images: [
+                    'Images/City-Bike/1.jpg',
+                    'Images/City-Bike/2.jpg'
+                ],
+                category: 'City Bike',
+                description: 'The Honda CB300R is a lightweight and nimble naked bike perfect for urban commuting and weekend pleasure rides.',
+                specs: {
+                    'Engine': '286cc liquid-cooled single-cylinder',
+                    'Power': '31bhp',
+                    'Transmission': '6-speed',
+                    'Weight': '317 lbs',
+                    'Fuel Capacity': '2.7 gallons',
+                    'Seat Height': '31.5 inches'
+                },
+                features: [
+                    'LED lighting',
+                    'Digital instrumentation',
+                    'ABS',
+                    'Upside-down fork',
+                    'Wave-style brake rotors',
+                    'IMU-based ESS'
+                ]
+            },
+            'city2': {
+                name: 'Hero Passion Pro',
+                price: 80000,
+                model: '2023',
+                images: [
+                    'Images/City-Bike/3.jpg',
+                    'Images/City-Bike/4.jpg'
+                ],
+                category: 'City Bike',
+                description: 'The Hero Passion Pro is a lightweight  bike perfect for urban commuting and weekend pleasure rides.',
+                specs: {
+                    'Engine': '109.15cc liquid-cooled single-cylinder',
+                    'Power': '9.3 bhp',
+                    'Transmission': '6-speed',
+                    'Weight': '317 lbs',
+                    'Fuel Capacity': '2.7 gallons',
+                    'Seat Height': '31.5 inches'
+                },
+                features: [
+                    'LED lighting',
+                    'Digital instrumentation',
+                    'ABS',
+                    'Upside-down fork',
+                    'Wave-style brake rotors',
+                    'IMU-based ESS'
+                ]
+            },
+            'city3': {
+                name: 'Honda Unicorn 160',
+                price: 160000,
+                model: '2023',
+                images: [
+                    'Images/City-Bike/5.jpg',
+                    'Images/City-Bike/6.jpg'
+                ],
+                category: 'City Bike',
+                description: 'The Honda Unicorn 160 is a lightweight  bike perfect for urban commuting and weekend pleasure rides.',
+                specs: {
+                    'Engine': '162.77cc liquid-cooled single-cylinder',
+                    'Power': '15 bhp',
+                    'Transmission': '6-speed',
+                    'Weight': '317 lbs',
+                    'Fuel Capacity': '2.7 gallons',
+                    'Seat Height': '31.5 inches'
+                },
+                features: [
+                    'LED lighting',
+                    'Digital instrumentation',
+                    'ABS',
+                    'Upside-down fork',
+                    'Wave-style brake rotors',
+                    'IMU-based ESS'
+                ]
+            },
+            'sport1': {
+                name: 'Yamaha YZF-R1',
+                price: 17399,
+                model: '2023',
+                images: [
+                    'Images/Sport/2.jpg',
+                    'Images/Sport/1.jpg'
+                ],
+                category: 'Sport Bike',
+                description: 'The Yamaha YZF-R1 is a legendary supersport motorcycle that represents the pinnacle of Yamaha\'s racing technology and engineering excellence.',
+                specs: {
+                    'Engine': '998cc liquid-cooled inline-four',
+                    'Power': '200bhp',
+                    'Transmission': '6-speed',
+                    'Weight': '448 lbs',
+                    'Fuel Capacity': '4.5 gallons',
+                    'Seat Height': '33.7 inches'
+                },
+                features: [
+                    'Quick Shift System (QSS)',
+                    'Banking-sensitive Traction Control',
+                    'Ride-by-Wire Throttle',
+                    'Six-axis IMU',
+                    'Four riding modes',
+                    'LED lighting system'
+                ]
+            },
+            'sport2': {
+                name: 'Kawasaki Ninja 300',
+                price: 390000,
+                model: '2023',
+                images: [
+                    'Images/Sport/3.jpg',
+                    'Images/Sport/4.jpg'
+                ],
+                category: 'Sport Bike',
+                description: 'The Kawasaki Ninja 300 is a legendary supersport motorcycle that represents the pinnacle of Yamaha\'s racing technology and engineering excellence.',
+                specs: {
+                    'Engine': '300cc liquid-cooled inline-four',
+                    'Power': '38.4 bhp',
+                    'Transmission': '6-speed',
+                    'Weight': '448 lbs',
+                    'Fuel Capacity': '4.5 gallons',
+                    'Seat Height': '33.7 inches'
+                },
+                features: [
+                    'Quick Shift System (QSS)',
+                    'Banking-sensitive Traction Control',
+                    'Ride-by-Wire Throttle',
+                    'Six-axis IMU',
+                    'Four riding modes',
+                    'LED lighting system'
+                ]
+            },
+            'sport3': {
+                name: 'Hero Mavrick 440',
+                price: 214500,
+                model: '2023',
+                images: [
+                    'Images/Sport/5.jpg',
+                    'Images/Sport/6.jpg'
+                ],
+                category: 'Sport Bike',
+                description: 'The Hero Mavrick 440 is a legendary supersport motorcycle that represents the pinnacle of Yamaha\'s racing technology and engineering excellence.',
+                specs: {
+                    'Engine': '440cc liquid-cooled inline-four',
+                    'Power': '35bhp',
+                    'Transmission': '6-speed',
+                    'Weight': '448 lbs',
+                    'Fuel Capacity': '4.5 gallons',
+                    'Seat Height': '33.7 inches'
+                },
+                features: [
+                    'Quick Shift System (QSS)',
+                    'Banking-sensitive Traction Control',
+                    'Ride-by-Wire Throttle',
+                    'Six-axis IMU',
+                    'Four riding modes',
+                    'LED lighting system'
+                ]
+            },
+            'offroad1': {
+                name: 'Royal Enfield Himalayan 450 ',
+                price: 333236,
+                model: '2023',
+                images: [
+                    'Images/Off-Roading/1.png',
+                    'Images/Off-Roading/2.png'
+                ],
+                category: 'Off-Road',
+                description: 'This is a high-performance enduro bike that delivers exceptional power and agility for the most demanding off-road conditions.',
+                specs: {
+                    'Engine': '449.9cc single-cylinder',
+                    'Power': '62bhp',
+                    'Transmission': '6-speed',
+                    'Weight': '234 lbs',
+                    'Fuel Capacity': '2.25 gallons',
+                    'Ground Clearance': '13.2 inches'
+                },
+                features: [
+                    'WP XPLOR suspension',
+                    'Traction Control',
+                    'Map Selection',
+                    'Electric starter',
+                    'Brembo brakes',
+                    'Chromoly steel frame'
+                ]
+            },
+            'offroad2': {
+                name: 'Yezdi Adventure',
+                price: 247072,
+                model: '2023',
+                images: [
+                    'Images/Off-Roading/3.png',
+                    'Images/Off-Roading/4.png'
+                ],
+                category: 'Off-Road',
+                description: 'This is a high-performance enduro bike that delivers exceptional power and agility for the most demanding off-road conditions.',
+                specs: {
+                    'Engine': '334cc single-cylinder',
+                    'Power': '49bhp',
+                    'Transmission': '6-speed',
+                    'Weight': '234 lbs',
+                    'Fuel Capacity': '2.25 gallons',
+                    'Ground Clearance': '13.2 inches'
+                },
+                features: [
+                    'WP XPLOR suspension',
+                    'Traction Control',
+                    'Map Selection',
+                    'Electric starter',
+                    'Brembo brakes',
+                    'Chromoly steel frame'
+                ]
+            },
+            'offroad3': {
+                name: 'Hero Xpulse 200 4v',
+                price: 176005,
+                model: '2023',
+                images: [
+                    'Images/Off-Roading/5.png',
+                    'Images/Off-Roading/6.png'
+                ],
+                category: 'Off-Road',
+                description: 'This is a high-performance enduro bike that delivers exceptional power and agility for the most demanding off-road conditions.',
+                specs: {
+                    'Engine': '199.6cc single-cylinder',
+                    'Power': '18.9 bhp',
+                    'Transmission': '6-speed',
+                    'Weight': '234 lbs',
+                    'Fuel Capacity': '2.25 gallons',
+                    'Ground Clearance': '13.2 inches'
+                },
+                features: [
+                    'WP XPLOR suspension',
+                    'Traction Control',
+                    'Map Selection',
+                    'Electric starter',
+                    'Brembo brakes',
+                    'Chromoly steel frame'
+                ]
+            }
+        };
+
+        // Get bike ID from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const bikeId = urlParams.get('id');
+        
+        // Populate bike details
+        if (bikeId && bikeDetails[bikeId]) {
+            const bike = bikeDetails[bikeId];
+            const detailsHTML = `
+                <div class="row">
+                    <div class="col-md-6">
+                        <div id="bikeCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                ${bike.images.map((image, index) => `
+                                    <div class="carousel-item ${index === 0 ? 'active' : ''}">
+                                        <img src="${image}" class="d-block w-100" alt="${bike.name}">
+                                    </div>
+                                `).join('')}
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#bikeCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#bikeCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h1>${bike.name}</h1>
+                        <p class="price-tag">₹${bike.price.toLocaleString()}</p>
+                        <p class="">Model: ${bike.model}</p>
+                        <p class=""Category: ${bike.category}</p>
+                        <p>${bike.description}</p>
+                        <button class="btn btn-primary btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#dealerContactModal">
+                            Dealer's Contact
+                        </button>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <h3>Specifications</h3>
+                        <table class="table table-dark specs-table">
+                            <tbody>
+                                ${Object.entries(bike.specs).map(([key, value]) => `
+                                    <tr>
+                                        <th >${key}</th>
+                                        <td>${value}</td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Key Features</h3>
+                        <ul class="features-list">
+                            ${bike.features.map(feature => `
+                                <li>${feature}</li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+            document.getElementById('bikeDetailsContainer').innerHTML = detailsHTML;
+        } else {
+            document.getElementById('bikeDetailsContainer').innerHTML = `
+                <div class="text-center">
+                    <h2>Bike Not Found</h2>
+                    <p>Sorry, the requested bike could not be found.</p>
+                    <a href="index.html" class="btn btn-primary">Return to Home</a>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
