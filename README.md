@@ -24,7 +24,7 @@ CSS3 – Styling
 Images – Visual content
 
 📂 Project Structure
-bikehub_GP/
+bikehub_GP/<br>
 ├── BIKE HUB.pptx          # Project presentation slides
 ├── group_project/
 │   ├── index.html         # Homepage
