@@ -25,7 +25,7 @@ Images – Visual content
 
 📂 Project Structure
 bikehub_GP/<br>
-├── BIKE HUB.pptx          # Project presentation slides
+├── BIKE HUB.pptx<br>        # Project presentation slides
 ├── group_project/
 │   ├── index.html         # Homepage
 │   ├── about.html         # About page
