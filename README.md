@@ -15,7 +15,7 @@ Organized images for different bike types (Bobber, City Bike, Off-Roading, Sport
 
 Responsive styling with CSS
 
-🛠️ Tech Stack
+🛠️ <b>Tech Stack</b>
 
 HTML5 – Structure
 
@@ -23,7 +23,7 @@ CSS3 – Styling
 
 Images – Visual content
 
-📂 Project Structure
+📂 <b>Project Structure</b>
 bikehub_GP/<br>
 ├── BIKE HUB.pptx<br>        # Project presentation slides
 ├── group_project/
@@ -37,7 +37,7 @@ bikehub_GP/<br>
 │       ├── Off-Roading/
 │       └── Sport/
 
-🚀 How to Run the Project
+🚀 <b>How to Run the Project</b>
 
 Download or clone the repository.
 
@@ -47,11 +47,11 @@ Double-click index.html to open in your browser.
 
 Navigate between pages using the menu links.
 
-📊 Presentation
+📊 <b>Presentation</b>
 
 The project includes a PowerPoint file (BIKE HUB.pptx) that explains the idea, design, and flow of the website.
 
-🌱 Future Enhancements
+🌱 <b>Future Enhancements</b>
 
 Add JavaScript for interactivity (bike search/filter).
 
@@ -59,6 +59,6 @@ Make the website fully mobile responsive.
 
 Add a contact/support page.
 
-👨‍💻 Team
+👨‍💻 <b>Team</b>
 
 This project was developed as part of a Group Project for learning and showcasing web development skills.
