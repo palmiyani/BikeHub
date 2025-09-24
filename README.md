@@ -1,9 +1,9 @@
-BikeHub 🚴‍♂️
+<b>BikeHub 🚴‍♂️</b>
 
 BikeHub is a static website project that showcases different types of bikes with details, images, and styling.
 It was created as a group project to demonstrate web development skills using HTML and CSS.
 
-📌 Features
+📌<b> Features</b>
 
 Homepage with navigation
 
