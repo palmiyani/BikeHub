@@ -28,7 +28,7 @@ bikehub_GP/<br>
 ├── BIKE HUB.pptx<br>        # Project presentation slides
 ├── group_project/<BR>
 │   ├── index.html         # Homepage
-│   ├── about.html         # About page
+│   ├── about.html  <BR>       # About page
 │   ├── bike-details.html  # Bike details page
 │   ├── styles.css         # CSS file
 │   └── Images/            # Image folders
