@@ -9,7 +9,7 @@ bikehub_GP/
 │── group_project/<br>
 │   │── index.html       # Homepage<br>
 │   │── about.html           # About page <br>
-│   │── bike-details.html     <br># Bike details page<br>
+│   │── bike-details.html     # Bike details page<br>
 │   │── styles.css            # Custom styles<br>
 │   │── Images/               # Bike images<br>
 │       ├── Bobber/<br>
