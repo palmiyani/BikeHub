@@ -6,10 +6,10 @@ This project was created to demonstrate front-end development skills using HTML,
 
 📂 Project Structure
 bikehub_GP/
-│── group_project/
-│   │── index.html            # Homepage
-│   │── about.html            # About page
-│   │── bike-details.html     # Bike details page
+│── group_project/<br>
+│   │── index.html    <br>        # Homepage
+│   │── about.html        <br>    # About page
+│   │── bike-details.html     <br># Bike details page
 │   │── styles.css            # Custom styles
 │   │── Images/               # Bike images
 │       ├── Bobber/
