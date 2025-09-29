@@ -7,15 +7,15 @@ This project was created to demonstrate front-end development skills using HTML,
 📂 Project Structure
 bikehub_GP/
 │── group_project/<br>
-│   │── index.html    <br>        # Homepage
-│   │── about.html        <br>    # About page
-│   │── bike-details.html     <br># Bike details page
-│   │── styles.css            # Custom styles
-│   │── Images/               # Bike images
-│       ├── Bobber/
-│       ├── City-Bike/
-│       ├── Off-Roading/
-│       ├── Sport/
+│   │── index.html       # Homepage<br>
+│   │── about.html           # About page <br>
+│   │── bike-details.html     <br># Bike details page<br>
+│   │── styles.css            # Custom styles<br>
+│   │── Images/               # Bike images<br>
+│       ├── Bobber/<br>
+│       ├── City-Bike/<br>
+│       ├── Off-Roading/<br>
+│       ├── Sport/<br>
 
 ✨ Features
 
